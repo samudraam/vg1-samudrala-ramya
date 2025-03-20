@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1536236632295476756}
   - component: {fileID: 2971341329764978820}
   - component: {fileID: 6589445144372271969}
+  - component: {fileID: -7280859625516273802}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
@@ -147,3 +148,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54853360a66c14bba95b6bebaf03ad32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &-7280859625516273802
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110290940334814512}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.19444445, y: 0}
+  m_Size: {x: 0.3888889, y: 0.11111111}
+  m_Direction: 0
