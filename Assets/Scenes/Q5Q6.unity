@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623d72de8c4a443d9a98b658356daafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeElapsed: 0
   spawnPoints:
   - {fileID: 904160624}
   - {fileID: 1613195728}
@@ -170,10 +169,19 @@ MonoBehaviour:
   - {fileID: 2214044427257249954, guid: d9726be2d69414c5c97ddac156a23363, type: 3}
   - {fileID: 340632089832019798, guid: 23b0074207d49459cb2141f080451b1f, type: 3}
   - {fileID: 1184493940322381442, guid: 427af3a826371408a95c82c4d5c51ef6, type: 3}
+  explosionPrefab: {fileID: 5110228473663108838, guid: 35707a4738d134c69bd6cb6be559f4d1, type: 3}
+  textScore: {fileID: 1082008541}
+  textMoney: {fileID: 122912166}
+  missileSpeedUpgradeText: {fileID: 1796952169}
+  bonusUpgradeText: {fileID: 518528582}
   maxAsteroidDelay: 2
   minAsteroidDelay: 0.2
   asteroidDelay: 0
-  explosionPrefab: {fileID: 5110228473663108838, guid: 35707a4738d134c69bd6cb6be559f4d1, type: 3}
+  timeElapsed: 0
+  score: 0
+  money: 0
+  missileSpeed: 2
+  bonusMultiplier: 1
 --- !u!4 &40011447
 Transform:
   m_ObjectHideFlags: 0
@@ -576,7 +584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Repair $X
+  m_text: Repair $100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -962,7 +970,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920271950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924760412}
+        m_TargetAssemblyTypeName: SpaceShooter.Ship, Assembly-CSharp
+        m_MethodName: UpgradeHull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &920271950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,7 +1237,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1197505126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40011446}
+        m_TargetAssemblyTypeName: SpaceShooter.GameController, Assembly-CSharp
+        m_MethodName: UpgradeBonus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1197505126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1338,7 +1370,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1245946607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40011446}
+        m_TargetAssemblyTypeName: SpaceShooter.GameController, Assembly-CSharp
+        m_MethodName: UpgradeMissileSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245946607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1503,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1279985950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924760412}
+        m_TargetAssemblyTypeName: SpaceShooter.Ship, Assembly-CSharp
+        m_MethodName: RepairHull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1279985950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,7 +1636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1349540962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924760412}
+        m_TargetAssemblyTypeName: SpaceShooter.Ship, Assembly-CSharp
+        m_MethodName: UpgradeFireSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1349540962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,7 +2389,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2110290940334814512, guid: e0e85a153c5524579a56580c590d0ba5, type: 3}
+  imageHealthBar: {fileID: 1611414924}
+  hullUpgradeText: {fileID: 1641657952}
+  fireSpeedUpgradeText: {fileID: 336039904}
+  hullText: {fileID: 0}
   firingDelay: 1
+  healthMax: 100
+  health: 100
 --- !u!95 &1924760413
 Animator:
   serializedVersion: 5
