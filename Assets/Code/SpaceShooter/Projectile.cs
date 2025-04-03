@@ -19,8 +19,8 @@ namespace SpaceShooter
         void Update()
         {
             // TODO: Make these dynamic
-            float acceleration = 1f;
-            float maxSpeed = 2f;
+            float acceleration = GameController.instance.missileSpeed / 2f;
+            float maxSpeed = GameController.instance.missileSpeed;
             // Home in on target
             ChooseNearestTarget();
             if (target != null)
@@ -72,6 +72,7 @@ namespace SpaceShooter
                 // Create an explosion and destroy it soon after
                 GameObject explosion = Instantiate(GameController.instance.explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 0.25f);
+                GameController.instance.EarnPoints(10);
             }
         }
     }
